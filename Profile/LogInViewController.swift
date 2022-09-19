@@ -75,11 +75,11 @@ class LogInViewController: UIViewController {
     }
    
     @objc func keyboardWillShow(sender: NSNotification) {
-         self.view.frame.origin.y = -90 // двигаем view на 90 pts вверх
+         self.view.frame.origin.y = -90 
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
-         self.view.frame.origin.y = 0 // возвращаем назад при скрытии клавиатуры
+         self.view.frame.origin.y = 0
     }
    
    @objc func dismissKeyboard() {

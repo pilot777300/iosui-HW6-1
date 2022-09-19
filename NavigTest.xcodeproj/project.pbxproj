@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0423FE7128AA3E9600CB2D8B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FE7028AA3E9600CB2D8B /* LogInViewController.swift */; };
 		0423FE7728AA439900CB2D8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423FE7628AA439900CB2D8B /* logo.png */; };
+		0424520728D22F1D00097C50 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424520628D22F1D00097C50 /* PhotosTableViewCell.swift */; };
 		045CD34A28C70E4D00665905 /* Aeroplan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 045CD34928C70E4D00665905 /* Aeroplan.jpeg */; };
 		045EF5EF288567E700D67C0E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EF5EE288567E700D67C0E /* ProfileHeaderView.swift */; };
 		04B2693128C26949001AFAEF /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2693028C26949001AFAEF /* PostTableViewCell.swift */; };
@@ -20,12 +21,16 @@
 		04E3F4CE28C8956000053F83 /* Avatarka1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04E3F4CD28C8955F00053F83 /* Avatarka1.jpg */; };
 		04E3F4D028C8AD9800053F83 /* Brothers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04E3F4CF28C8AD9800053F83 /* Brothers.tiff */; };
 		04E4847628C665C500BE7076 /* Boston.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04E4847528C665C500BE7076 /* Boston.jpg */; };
+		04E89F4D28D32E8300B84715 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E89F4C28D32E8300B84715 /* PhotosViewController.swift */; };
 		04EDAC5E288AE5C700E8F6D9 /* A330-300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */; };
+		04F35C1B28D495E60086448D /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F35C1A28D495E60086448D /* PhotosCollectionViewCell.swift */; };
+		04F35C1D28D4C4A60086448D /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F35C1C28D4C4A60086448D /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0423FE7028AA3E9600CB2D8B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0423FE7628AA439900CB2D8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0424520628D22F1D00097C50 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		045CD34928C70E4D00665905 /* Aeroplan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aeroplan.jpeg; sourceTree = "<group>"; };
 		045EF5EE288567E700D67C0E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		04B2693028C26949001AFAEF /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -39,7 +44,10 @@
 		04E3F4CD28C8955F00053F83 /* Avatarka1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatarka1.jpg; sourceTree = "<group>"; };
 		04E3F4CF28C8AD9800053F83 /* Brothers.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Brothers.tiff; sourceTree = "<group>"; };
 		04E4847528C665C500BE7076 /* Boston.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boston.jpg; sourceTree = "<group>"; };
+		04E89F4C28D32E8300B84715 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "A330-300.jpg"; sourceTree = "<group>"; };
+		04F35C1A28D495E60086448D /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		04F35C1C28D4C4A60086448D /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		049C345828830E7A0046CC99 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0424520628D22F1D00097C50 /* PhotosTableViewCell.swift */,
+				04F35C1A28D495E60086448D /* PhotosCollectionViewCell.swift */,
+				04E89F4C28D32E8300B84715 /* PhotosViewController.swift */,
 				04BB676028784AA600161ABA /* ProfileViewController.swift */,
 				04B2693028C26949001AFAEF /* PostTableViewCell.swift */,
 				045EF5EE288567E700D67C0E /* ProfileHeaderView.swift */,
@@ -68,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */,
+				04F35C1C28D4C4A60086448D /* arrow.png */,
 				04E4847528C665C500BE7076 /* Boston.jpg */,
 				04E3F4CF28C8AD9800053F83 /* Brothers.tiff */,
 				04E3F4CD28C8955F00053F83 /* Avatarka1.jpg */,
@@ -161,6 +173,7 @@
 				04C05DD528772424006747AC /* LaunchScreen.storyboard in Resources */,
 				04EDAC5E288AE5C700E8F6D9 /* A330-300.jpg in Resources */,
 				045CD34A28C70E4D00665905 /* Aeroplan.jpeg in Resources */,
+				04F35C1D28D4C4A60086448D /* arrow.png in Resources */,
 				04E4847628C665C500BE7076 /* Boston.jpg in Resources */,
 				04E3F4D028C8AD9800053F83 /* Brothers.tiff in Resources */,
 				04E3F4CE28C8956000053F83 /* Avatarka1.jpg in Resources */,
@@ -176,6 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BB676128784AA600161ABA /* ProfileViewController.swift in Sources */,
+				04E89F4D28D32E8300B84715 /* PhotosViewController.swift in Sources */,
+				04F35C1B28D495E60086448D /* PhotosCollectionViewCell.swift in Sources */,
+				0424520728D22F1D00097C50 /* PhotosTableViewCell.swift in Sources */,
 				04B2693128C26949001AFAEF /* PostTableViewCell.swift in Sources */,
 				0423FE7128AA3E9600CB2D8B /* LogInViewController.swift in Sources */,
 				045EF5EF288567E700D67C0E /* ProfileHeaderView.swift in Sources */,

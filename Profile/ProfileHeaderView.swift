@@ -8,8 +8,15 @@
 import UIKit
 
 
+
+struct PicturesData {
+    var picture: String?
+}
+
 class ProfileHeaderView: UIView {
-   
+    
+    var pictureData = [PicturesData]()
+    
     private lazy var profileView = UIImageView()
     private lazy var status = UILabel ()
     private lazy var newStatus = UILabel()
@@ -19,7 +26,13 @@ class ProfileHeaderView: UIView {
 
       override init(frame: CGRect){
         super.init(frame: frame)
-        
+          
+          pictureData.append(PicturesData(picture: "Boston.jpg"))
+          pictureData.append(PicturesData(picture: "Aeroplan.jpeg"))
+          pictureData.append(PicturesData(picture: "Avatarka1.jpg"))
+          pictureData.append(PicturesData(picture: "Brothers.tiff"))
+          pictureData.append(PicturesData(picture: "A330-300.jpg"))
+          
         profileView.backgroundColor = .systemGray5
         profileView.image = UIImage(named: "Avatarka1.jpg")
         profileView.layer.borderColor = UIColor.white.cgColor
@@ -29,7 +42,6 @@ class ProfileHeaderView: UIView {
           profileView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(profileView)
           
-         
           status.backgroundColor = .systemGray5
           status.text = "Пилот квадрокоптера"
           status.font = UIFont.boldSystemFont(ofSize: 20)
@@ -75,6 +87,7 @@ class ProfileHeaderView: UIView {
           
         setupConstrains()
 }
+    
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -82,6 +95,7 @@ class ProfileHeaderView: UIView {
       private  func setupConstrains() {
              let safeArea = self.safeAreaLayoutGuide
           NSLayoutConstraint.activate([
+          
             profileView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16.0),
             profileView.widthAnchor.constraint(equalToConstant: 100),
             profileView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 16.0),
@@ -105,11 +119,11 @@ class ProfileHeaderView: UIView {
             changeStatusButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
             changeStatusButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16.0),
             changeStatusButton.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 16),
-            changeStatusButton.heightAnchor.constraint(equalToConstant: 50)
+            changeStatusButton.heightAnchor.constraint(equalToConstant: 50),
             
           ])
     }
-    
+
     @objc func editingChanged(textField: UITextField) {
         changedText = setStatus.text!
     }

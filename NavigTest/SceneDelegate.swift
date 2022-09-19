@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createFeedViewController() -> UINavigationController {
-    let feedViewController = LogInViewController() //FeedViewController()
+    let feedViewController = LogInViewController() 
         feedViewController.title = "Лента"
         feedViewController.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "doc.richtext"), tag: 0)
         return UINavigationController(rootViewController: feedViewController)

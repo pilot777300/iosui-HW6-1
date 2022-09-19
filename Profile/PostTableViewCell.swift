@@ -9,6 +9,8 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    
+    
     lazy var backView: UILabel = {
         let authorlbl = UILabel()
         authorlbl.translatesAutoresizingMaskIntoConstraints = false
@@ -85,6 +87,7 @@ class PostTableViewCell: UITableViewCell {
         backView.addSubview(postImage)
         backView.addSubview(views)
         backView.addSubview(likes)
+   
         cellConstraints()
     }
     
@@ -124,5 +127,6 @@ class PostTableViewCell: UITableViewCell {
             views.heightAnchor.constraint(equalToConstant: 20)
             
         ])
+        
     }
 }

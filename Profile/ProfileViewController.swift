@@ -16,10 +16,18 @@ struct Post {
    
 }
 
+
 class ProfileViewController: UIViewController {
    
+    lazy var topView: ProfileHeaderView = {
+        let tv = ProfileHeaderView()
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        return tv
+    }()
+    
     var tableView = UITableView()
     var postData = [Post]()
+  
       
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +37,10 @@ class ProfileViewController: UIViewController {
         postData.append(Post(author: "Cергей Крокодилов", description: "Как тебе такое, Илон Маск?", image: "Boston.jpg", lokes: 132, views: 4567))
         postData.append(Post(author: "Donald Trump", description: "Wow!!! Wonderfull Kukuruznik", image: "Aeroplan.jpeg", lokes: 243, views: 427))
         
+  
         setTableView()
         setConstraints()
-
+       
     }
 
         func setTableView() {
@@ -73,22 +82,37 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.postAuthor.text = thePost.author
         cell.postTxt.text = thePost.description
         cell.postImage.image = UIImage(named: "\(thePost.image ?? "No Data")")
-        
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
        
         let view = ProfileHeaderView()
         view.backgroundColor = .systemGray5
+        let q = PhotosTableViewCell()
+        let editButton = UIButton(frame: CGRect(x:0, y:190, width:400, height:150))
+        editButton.addTarget(self, action: #selector(showGallery), for: UIControl.Event.touchUpInside)
+        view.addSubview(q)
+        view.addSubview(editButton)
         return view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
        
-        return 190
+        return 320
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
+    
+    @objc func showGallery(sender: UIButton) {
+       let vc = PhotosViewController()
+          navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }
+
+    
+
